@@ -1,0 +1,258 @@
+/* Main Navbar */
+#main-nav .container ul li:nth-child(2),
+#main-nav .container ul li:nth-child(3),
+#main-nav .container ul li:nth-child(4),
+#main-nav .container ul li:nth-child(5) {
+  display: none;
+}
+
+#main-nav {
+  position: relative;
+}
+
+.hamburger {
+  background-color: #edd6c6;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.hamburger span {
+  padding-right: 0.5rem;
+}
+
+#main-nav .logo {
+  justify-self: left;
+}
+
+#main-nav .logo .main-logo {
+  font-size: 2.8rem;
+}
+#main-nav .logo .bottom-logo {
+  font-size: 0.5rem;
+}
+
+.mobile-nav {
+  background-color: #edd6c6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 81vh;
+  padding-bottom: 4rem;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  transform: translateX(110%);
+  transition: transform 0.3s ease-in;
+}
+
+.mobile-nav-active {
+  transform: translateX(0%);
+}
+
+.mobile-nav-passive {
+  transform: translateX(110%);
+  transition: transform ease-in;
+}
+
+.mobile-nav ul li {
+  padding: 1.5rem;
+  border-bottom: 1px solid #9b7569;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.mobile-nav ul li a {
+  color: #9b7569;
+}
+
+/* General */
+.line-heading {
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
+}
+
+.price {
+  font-size: 0.85rem;
+}
+
+/* Small nav */
+#small-nav .container {
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "call call sign sign sign"
+    "media . . . .";
+  padding: 0.5rem;
+}
+
+/* New products */
+.new-product-card-content {
+  grid-template-columns: 1fr;
+}
+
+/* Showcase */
+.showcase-content::before {
+  left: -10rem;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 10rem;
+}
+
+.l-heading {
+  font-size: 2rem;
+}
+
+.showcase-p {
+  font-size: 0.8rem;
+}
+.main-btn {
+  width: 8rem;
+  font-size: 0.8rem;
+}
+
+/* Categories */
+.card-content-item {
+  width: 310px;
+  grid-template-rows: 70% 10% 10%;
+}
+
+/* Brands */
+.brand-card-content {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.brand-card-content div:nth-child(7),
+.brand-card-content div:nth-child(8),
+.brand-card-content div:nth-child(9),
+.brand-card-content div:nth-child(10),
+.brand-card-content div:nth-child(11),
+.brand-card-content div:nth-child(12) {
+  display: none;
+}
+
+/* Contact form */
+.contact-card-content {
+  flex-direction: column;
+}
+
+.main-form {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 0.2rem;
+  padding-bottom: 1rem;
+}
+
+#name {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  padding: 0.5rem;
+}
+
+#subject {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  padding: 0.5rem;
+}
+
+#main-txtarea {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+
+.btn-main-form {
+  grid-column: 1/-1;
+  grid-row: 5/6;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: 6fr 3fr;
+  grid-template-rows: 1fr 8fr;
+  column-gap: 0.2rem;
+  row-gap: 0.5rem;
+}
+
+#search {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin-left: 0;
+  width: 100%;
+}
+
+.btn-search {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-right: 0;
+  width: 100%;
+}
+
+#side-txtarea {
+  grid-column: 1/-1;
+}
+
+/* Extra-small devices */
+@media screen and (max-width: 380px) {
+  /* Navbar */
+  #small-nav {
+    font-size: 0.9rem;
+  }
+
+  .social-media {
+    font-size: 0.9rem;
+    padding-top: 0.2rem;
+  }
+
+  .social-media i {
+    padding-right: 0.3rem;
+  }
+
+  /* Showcase */
+  .l-heading {
+    font-size: 1.5rem;
+  }
+
+  .showcase-p {
+    line-height: 1.2;
+  }
+
+  /* Categories */
+  .card-content-item {
+    width: 300px;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.85rem;
+  }
+}
+
+/* Iphone 5/SE */
+@media screen and (max-width: 320px) {
+  /* Showcase */
+  .l-heading {
+    font-size: 1.3rem;
+  }
+
+  .showcase-p {
+    line-height: 1;
+    font-size: 0.7rem;
+  }
+
+  .main-btn {
+    padding: 0.2rem;
+    font-size: 0.7rem;
+  }
+
+  /* Categories */
+  .card-content-item {
+    width: 260px;
+    grid-template-rows: 60% 12% 12%;
+  }
+}
